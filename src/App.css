@@ -1,38 +1,187 @@
+body {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364); 
+  color: #e0e0e0; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: #0f2027;
+  }
+  50% {
+    background-color: #203a43;
+  }
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  animation: pulse 10s infinite ease-in-out; 
+}
+
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: #1a1a1a; 
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00e676;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+
+.logo h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #00e676; 
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #00e676;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff1744; 
+  background-color: transparent;
+  transform: translateY(-2px); 
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: #ff1744;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+.search-form 
+{
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.search-form input[type="text"] {
+  padding: 0.6rem;
+  background-color: #1a1a1a;
+  border: 2px solid #00e676;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: 260px;
+}
+
+.search-form button {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  background-color: #00e676;
+  color: #000;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #ff1744;
+  transform: scale(1.05);
+}
+
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img:hover {
+  transform: translateY(-10px) scale(1.03); 
+}
+
+
+.pagination {
+  margin: 3rem 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button {
+  padding: 0.8rem 1.4rem;
+  margin: 0 0.8rem;
+  font-size: 1.2rem;
+  background-color: #00e676;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button:hover {
+  background-color: #ff1744;
+  transform: translateY(-2px);
+}
+
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cast-card img:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.cast-card p {
+  margin: 0.8rem 0;
+  font-size: 1.3rem;
+  color: #e0e0e0; 
 }
