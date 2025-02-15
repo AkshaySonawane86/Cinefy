@@ -5,6 +5,16 @@ const Navbar = () => {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
 
+  const [isOpen,setIsOpen]=useState(false);
+
+//   const menuToggle=document.getElementById("menu-toggle");
+
+//     const navLinks=document.getElementById("nav-links");
+
+//     menuToggle.addEventListener("click",()=>{
+//         navLinks.classList.toggle("active");
+//  });
+
   const handleSearch = (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
     if (search.trim()) {
@@ -20,12 +30,13 @@ const Navbar = () => {
       <div className="logo">
         <h1>Movie Time</h1>
       </div>
-      <div className="nav-links">
+      <button class="menu-toggle" id="menu-toggle" onClick={()=>setIsOpen(!isOpen)}>☰</button>
+      <div className={`nav-links ${isOpen ? "active" : ""}`}>
         <Link to="/">Popular Movies</Link>
         <Link to="/top-rated">Top Rated</Link>
         <Link to="/upcoming">Upcoming</Link>
       </div>
-      <form onSubmit={handleSearch} className="search-form">
+      <form onSubmit={handleSearch} className={`search-form ${isOpen ? "active" : ""}`}>
         <input
           type="text"
           value={search}

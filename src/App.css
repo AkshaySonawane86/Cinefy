@@ -185,3 +185,73 @@ body {
   font-size: 1.3rem;
   color: #e0e0e0; 
 }
+
+.menu-toggle
+{
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px)
+{
+  .menu-toggle
+  {
+    display: block;
+  }
+
+  .nav-links
+  {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #444;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .search-form
+  {
+   display: none;
+   flex-direction: row;
+   width: 100%;
+   background: #444;
+   position: absolute;
+   top: 195px;
+   left: 0;
+   text-align: center;
+   justify-content: center;
+   padding-bottom: 8px;
+   padding-top: 8px;
+  }
+
+  .search-form input[type="text"]
+  {
+    margin-top: 8px;
+     /* margin-left: 100px;  */
+    text-align: center;
+     /* align-items: center; */
+     /* justify-content: center; */
+  }
+
+  .search-form.active
+  {
+    display: flex;
+  }
+
+  .nav-links.active
+  {
+    display: flex;
+  }
+
+  .nav-links li
+  {
+    margin: 10px 0;
+  }
+}
