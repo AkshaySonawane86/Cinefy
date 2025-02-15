@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Cinefy/static/css/main.77543fb3.css",
+    "main.js": "/Cinefy/static/js/main.d5e48dae.js",
+    "static/js/453.6f2e229a.chunk.js": "/Cinefy/static/js/453.6f2e229a.chunk.js",
+    "index.html": "/Cinefy/index.html",
+    "main.77543fb3.css.map": "/Cinefy/static/css/main.77543fb3.css.map",
+    "main.d5e48dae.js.map": "/Cinefy/static/js/main.d5e48dae.js.map",
+    "453.6f2e229a.chunk.js.map": "/Cinefy/static/js/453.6f2e229a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77543fb3.css",
+    "static/js/main.d5e48dae.js"
+  ]
+}
