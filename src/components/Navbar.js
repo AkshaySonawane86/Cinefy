@@ -7,18 +7,10 @@ const Navbar = () => {
 
   const [isOpen,setIsOpen]=useState(false);
 
-//   const menuToggle=document.getElementById("menu-toggle");
-
-//     const navLinks=document.getElementById("nav-links");
-
-//     menuToggle.addEventListener("click",()=>{
-//         navLinks.classList.toggle("active");
-//  });
-
   const handleSearch = (e) => {
-    e.preventDefault(); // Prevent form from refreshing the page
+    e.preventDefault(); 
     if (search.trim()) {
-      // Navigate to a search results page or append the query to the current URL
+      
       navigate(`/?search=${search}`);
     } else {
       alert('Please enter a search term!');
