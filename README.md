@@ -6,9 +6,9 @@ This web application allows users to discover movies and receive personalized re
 
 ## Features
 
-- **Search Movies: ** Look for movies by title, genre, or year.
-- **Movie Details: ** See movie information like ratings, release dates, and synopses.
+- Search Movies: Look for movies by title, genre, or year.
+- Movie Details: See movie information like ratings, release dates, and synopses.
 
 ## Acknowledgments
-- **TMDb API - ** For providing movie data.
-- **React - ** For powering the app's frontend.
+- TMDb API - For providing movie data.
+- React - For powering the app's frontend.
