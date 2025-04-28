@@ -8,7 +8,7 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const location = useLocation();
-  const query = new URLSearchParams(location.search).get('search'); // Get the search query
+  const query = new URLSearchParams(location.search).get('search');
 
   useEffect(() => {
     const fetchMovies = () => {

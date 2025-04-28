@@ -1,4 +1,4 @@
-# Movie Recommendation App
+## Movie Recommendation System with TMDB API
 
 Welcome to the Movie Recommendation App! 🎬🍿
 
@@ -12,3 +12,9 @@ This web application allows users to discover movies and receive personalized re
 ## Acknowledgments
 - TMDb API - For providing movie data.
 - React - For powering the app's frontend.
+
+## 🌐 Connect with me
+- [LinkedIn](http://www.linkedin.com/in/akshay-sonawane-coder)
+- [GitHub](https://github.com/AkshaySonawane86)
+
+> **Live Demo:** [Click Here](https://akshaysonawane86.github.io/Cinefy/)
